@@ -1,0 +1,40 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package cnc.assignmnet;
+
+/**
+ *
+ * @author KELVIN
+ */
+public class CNCAssignmnet {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Welcome Splash=new Welcome();
+        Splash.setVisible(true);
+        LoginStaff Start=new LoginStaff();
+
+        try{
+            for(int i=0;i<=100;i++)
+                {    
+                    Thread.sleep(10);
+                    Splash.LoadingNumber.setText(Integer.toString(i)+"%");
+                    Splash.LoadingBar.setValue(i);
+                    
+                    if(i==100){
+                        Splash.setVisible(false);
+                        Start.setVisible(true);
+                    }
+                    }
+    }catch(Exception e){
+    }
+    }
+}
+
+
